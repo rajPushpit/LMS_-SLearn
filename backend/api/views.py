@@ -7,9 +7,6 @@ from django.db import models
 from django.db.models.functions import ExtractMonth
 from django.core.files.uploadedfile import InMemoryUploadedFile
 
-
-
-
 from api import serializer as api_serializer
 from api import models as api_models
 from userauths.models import User, Profile
