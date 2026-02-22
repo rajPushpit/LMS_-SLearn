@@ -88,16 +88,27 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 # MySql Database
 
-DATABASES={
+# DATABASES={
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'slearndb',
+#         'USER': 'root',
+#         'PASSWORD': 'Golu123@',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#         }
+#     }
+
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'slearndb',
-        'USER': 'root',
-        'PASSWORD': 'Golu123@',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        }
+        'NAME': env('MYSQL_DATABASE'),
+        'USER': env('MYSQL_USER'),
+        'PASSWORD': env('MYSQL_PASSWORD'),
+        'HOST': env('MYSQL_HOST'),
+        'PORT': env('MYSQL_PORT'),
     }
+}
 
 
 
